@@ -1,7 +1,19 @@
 <app-header />
 
 <main>
-  <app-home/>
+  <section>
+    @for (personaje of personajes; track personaje.id){
+      <app-portada
+      [personaje]="personaje"
+      [selected] = "personaje.id === selectedPersonaje?.id"
+      (select)= "onSelectPersonaje($event)"
+      />
+      @if(selectedPersonaje?.id === personaje.id){
+        <app-desplegable [personaje]="selectedPersonaje"/>
+      }  
+    }
+
+  </section>
 </main> 
 
 <app-footer/>

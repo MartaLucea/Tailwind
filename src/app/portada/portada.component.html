@@ -1,0 +1,9 @@
+<button [class.active]="selected()" (click)="onSelectPersonaje()"
+    class="flex flex-row ">
+    <img [src]='imagePath' [alt]="personaje().name"
+        class="w-30 rounded-full">
+    <div class=" flex flex-row">
+        <h3>{{personaje().name}}</h3>
+        <p>{{personaje().desc}}</p>
+    </div>
+</button>
