@@ -1,59 +1,38 @@
-# Tailwind
+# Sir Patrick Stewart – Web de tribut
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.3.
+Pàgina web d'una sola pàgina sobre la carrera de Sir Patrick Stewart, feta amb **Angular** i **Tailwind CSS**.
 
-## Development server
+## Contingut
 
-To start a local development server, run:
+- **Inici**: presentació amb imatge i botó cap als personatges.
+- **Biografia**: resum de la seva vida i carrera, dades destacades i fotos.
+- **Personatges**: targetes amb els seus papers (imatge, descripció i botó "Més informació").
+- **Footer**: enllaços i contacte.
 
-```bash
-ng serve
+## Estructura
+
+```
+src/
+  app/
+    header/        capçalera i menú de navegació
+    hero/          secció d'inici
+    biografia/     secció de biografia
+    portada/       targeta d'un personatge
+    desplegable/   informació ampliada del personatge
+    footer/        peu de pàgina
+    personajes.ts  dades dels personatges
+public/assets/     imatges (hero.jpg, shakespeare.jpg, picard.jpg, xavier.jpg i personajes/)
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Com executar-ho
 
 ```bash
-ng generate component component-name
+npm install
+npm start      # o: ng serve
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Obre `http://localhost:4200`.
 
-```bash
-ng generate --help
-```
+## Autoria
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Marta Lucea – marta.lucea.7e7@itb.cat
