@@ -1,5 +1,7 @@
-<nav class="flex flex-row content-between text-blue-50 gap-4">
-<a>Inici</a>
-<a>Info</a>
-<a>Personatges Principals</a>
+<nav aria-label="Navegació principal">
+  <ul class="flex gap-6" [class.flex-col]="vertical()" [class.gap-3]="vertical()">
+    <li><a href="#inici" class="hover:text-red-800 hover:underline">Inici</a></li>
+    <li><a href="#biografia" class="hover:text-red-800 hover:underline">Biografia</a></li>
+    <li><a href="#personatges" class="hover:text-red-800 hover:underline">Personatges</a></li>
+  </ul>
 </nav>

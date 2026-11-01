@@ -1,6 +1,10 @@
-<section id="desplegable">
-    <p>{{ personaje.historia }}</p>
-    <p>{{ personaje.primeraAparicion }}</p>
-    <p>{{ personaje.criatura }}</p>
+<section class="mt-4 pt-4 border-t border-stone-300">
+  <p>{{ personaje.historia }}</p>
 
+  <dl class="mt-4 grid grid-cols-[5.5rem_1fr] gap-y-1 text-sm">
+    <dt class="text-stone-600">Debut</dt>
+    <dd>{{ personaje.debut }}</dd>
+    <dt class="text-stone-600">Categoria</dt>
+    <dd>{{ personaje.categoria }}</dd>
+  </dl>
 </section>

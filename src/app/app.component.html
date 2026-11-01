@@ -1,59 +1,26 @@
 <app-header />
 
 <main>
-  <section>
-    @for (personaje of personajes; track personaje.id){
-      <app-portada
-      [personaje]="personaje"
-      [selected] = "personaje.id === selectedPersonaje?.id"
-      (select)= "onSelectPersonaje($event)"
-      />
-      @if(selectedPersonaje?.id === personaje.id){
-        <app-desplegable [personaje]="selectedPersonaje"/>
-      }  
-    }
+  <app-hero />
+  <app-biografia />
 
+  <section id="personatges" class="scroll-mt-16 border-t border-stone-300">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-14">
+      <h2 class="text-3xl font-bold">Personatges</h2>
+      <p class="mt-2 text-stone-600">Alguns dels papers que han marcat la seva carrera.</p>
+
+      <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+        @for (personaje of personajes; track personaje.id) {
+          <li class="h-full">
+            <app-portada
+              [personaje]="personaje"
+              [selected]="personaje.id === selectedPersonajeId"
+              (select)="onSelectPersonaje($event)" />
+          </li>
+        }
+      </ul>
+    </div>
   </section>
-</main> 
+</main>
 
-<app-footer/>
-
-<!--
-<h1 class="text-3xl
-font-bold text-blue-600">
-Hola Angular!
-</h1>
-
-<button class="bg-blue-600
-text-white p-4 rounded-lg">
-Desa
-</button>
-
-<h1 class="text-4xl font-bold text-sky-600">Títol</h1>
-<p class="text-lg text-gray-600">Descripció</p>
-<p class="text-center italic">Text centrat</p>
-
-<div class="w-full
-p-6 mt-4 rounded-xl
-bg-gray-200">
-Targeta
-</div>
-
-<div class="flex items-center justify-between gap-4">
-<span>Logo</span>
-<nav>Menú</nav>
-</div>
-
-<div class="grid grid-cols-3 gap-4">
-<article class="bg-sky-200 p-4">1</article>
-<article class="bg-sky-200 p-4">2</article>
-<article class="bg-sky-200 p-4">3</article>
-</div>
-
-<button class="bg-blue-600 hover:bg-blue-800
-focus:ring-4 focus:ring-blue-300
-text-white px-6 py-3 rounded-lg
-transition-colors">
-Envia
-</button>
--->
+<app-footer />

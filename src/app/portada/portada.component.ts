@@ -1,24 +1,18 @@
-import { Component , input, output} from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Personaje } from './personaje.model';
-
+import { DesplegableComponent } from '../desplegable/desplegable.component';
 
 @Component({
-  imports: [],
+  imports: [DesplegableComponent],
   selector: 'app-portada',
   templateUrl: './portada.component.html',
 })
 export class PortadaComponent {
   personaje = input.required<Personaje>();
-  select = output<string>();
   selected = input.required<boolean>();
+  select = output<string>();
 
-  get imagePath(): string {
-    return `assets/gris.jpg`
-    //return `assets/personajes/` + this.personaje().img
-  }
-
-  onSelectPersonaje(){
-    this.select.emit(this.personaje().id)
+  onSelectPersonaje() {
+    this.select.emit(this.personaje().id);
   }
 }
-

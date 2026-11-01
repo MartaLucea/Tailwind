@@ -1,9 +1,10 @@
 export interface Personaje{
-    id: string;
-    name: string;
-    img: string;
-    desc: string;
+    id: string,
+    nombre: string,
+    universo: string,
+    imagen:string,
+    descripcion: string,
     historia: string,
-    primeraAparicion: string,
-    criatura: string
+    debut: string,
+    categoria: string
 }
