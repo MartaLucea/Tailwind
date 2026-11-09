@@ -1,26 +1,7 @@
 <app-header />
 
 <main>
-  <app-hero />
-  <app-biografia />
-
-  <section id="personatges" class="scroll-mt-16 border-t border-stone-300">
-    <div class="max-w-6xl mx-auto px-4 py-12 md:py-14">
-      <h2 class="text-3xl font-bold">Personatges</h2>
-      <p class="mt-2 text-stone-600">Alguns dels papers que han marcat la seva carrera.</p>
-
-      <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-        @for (personaje of personajes; track personaje.id) {
-          <li class="h-full">
-            <app-portada
-              [personaje]="personaje"
-              [selected]="personaje.id === selectedPersonajeId"
-              (select)="onSelectPersonaje($event)" />
-          </li>
-        }
-      </ul>
-    </div>
-  </section>
+  <router-outlet/>
 </main>
 
 <app-footer />

@@ -1,7 +1,29 @@
 <nav aria-label="Navegació principal">
   <ul class="flex gap-6" [class.flex-col]="vertical()" [class.gap-3]="vertical()">
-    <li><a href="#inici" class="hover:text-red-800 hover:underline">Inici</a></li>
-    <li><a href="#biografia" class="hover:text-red-800 hover:underline">Biografia</a></li>
-    <li><a href="#personatges" class="hover:text-red-800 hover:underline">Personatges</a></li>
+    <li>
+      <a 
+        routerLink="/" 
+        routerLinkActive="text-red-800 font-bold border-b-2 border-red-800" 
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-red-800 hover:underline transition-colors">
+        Inici
+      </a>
+    </li>
+    <li>
+      <a 
+        routerLink="/biografia" 
+        routerLinkActive="text-red-800 font-bold border-b-2 border-red-800"
+        class="hover:text-red-800 hover:underline transition-colors">
+        Biografia
+      </a>
+    </li>
+    <li>
+      <a 
+        routerLink="/personajes" 
+        routerLinkActive="text-red-800 font-bold border-b-2 border-red-800"
+        class="hover:text-red-800 hover:underline transition-colors">
+          Personatges
+        </a>
+    </li>
   </ul>
 </nav>
